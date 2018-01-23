@@ -1,0 +1,188 @@
+<html>
+	<head>
+        <title>Laboratorio 4: JavaScript</title>
+        <link href="styles.css" rel="stylesheet" type="text/css"/>
+		<meta http-equiv="Content-Type" content="text/html" charset="utf-8"></meta>
+    </head>
+    <body>
+        <h1>Laboratorio 4: Javascript</h1>
+        <h2>Jorge Alberto Niño Cabal A01172309</h2>
+        <button id ="Save" onclick="run(1);"> Ejercicio 1: Tabla de numeros </button> 
+        <button id ="Save" onclick="run(2);"> Ejercicio 2: Suma Aleatoria </button> 
+        <button id ="Save" onclick="run(3);"> Ejercicio 3: Contar  </button> 
+        <button id ="Save" onclick="run(4);"> Ejercicio 4: Promedio </button> 
+        <button id ="Save" onclick="run(5);"> Ejercicio 5: Inverso </button> 
+
+
+        <h2>Ejercicio 6: A. HQ9+ </h2>
+        <p>
+            time limit per test
+            2 seconds
+            memory limit per test
+            256 megabytes
+            input
+            standard input
+            output
+            standard output
+            
+            HQ9+ is a joke programming language which has only four one-character instructions:
+            
+                "H" prints "Hello, World!",
+                "Q" prints the source code of the program itself,
+                "9" prints the lyrics of "99 Bottles of Beer" song,
+                "+" increments the value stored in the internal accumulator.
+            
+            Instructions "H" and "Q" are case-sensitive and must be uppercase. The characters of the program which are not instructions are ignored.
+            
+            You are given a program written in HQ9+. You have to figure out whether executing this program will produce any output.
+            <h3>Input</h3>
+            
+            The input will consist of a single line p which will give a program in HQ9+. String p will contain between 1 and 100 characters, inclusive. ASCII-code of each character of p will be between 33 (exclamation mark) and 126 (tilde), inclusive.
+            <h3>Output</h3>
+            
+            Output "YES", if executing the program will produce any output, and "NO" otherwise.
+
+            <h3>Examples:</h3>
+    
+            <h3>Input</h3>
+
+            Hi!
+
+            <h3>Output</h3>
+
+            YES
+
+            <h3>Input</h3>
+
+            Codeforces
+
+            <h3>Output</h3>
+
+            NO
+        </p>
+        <button id ="Save" onclick="run(6);"> Ejercicio 6: A. HQ9+</button> 
+        <hr></hr>
+        <h3>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</h3>
+        <p>
+            <ol>
+                <li>
+                    JavaScript no es lenguaje compilado.
+                </li>
+                <li>
+                    JavaScript se integra directamente en las páginas HTML y es interpretado por el cliente (navegador).
+                </li>
+                <li>
+                    JavaScript está basado en objetos, mientras Java es orientado a objetos (OOP).
+                </li>
+                <li>
+                    JavaScript no utiliza clases.
+                </li>
+                <li>
+                    En JavaScript no declaras el tipo de la variable, en Java sí.
+                </li>
+                <li>
+                    Las referencias a los objetos se comprueban en tiempo real durante ejecución en JavaScript. En los lenguajes compilados como Java esa comprobación se efectúa al compilarse.
+                </li>
+            </ol>
+        </p>
+        <h3>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*) </h3>
+        <p>
+            <ul>
+                <li>
+                    <h4>Date.now()</h4>
+                    Devuelve el valor numérico correspondiente a la hora actual
+                </li>
+                <li>
+                    <h4>Date.parse()</h4>
+                    Transforma una cadena que representa una fecha, y devuelve el número de milisegundos desde el 1 de enero de 1970, hora local 00:00:00.
+                </li>
+                <li>
+                    <h4>Date.UTC()</h4>
+                    Acepta los mismos parámetros que la forma más larga del constructor, y devuelve el número de milisegundos en un objeto Date desde el 1 de enero de 1970, hora universal 00:00:00.
+                </li>
+                <li>
+                    <h4>Date.getFullYear()</h4>
+                    Devuelve el valor de año usando la hora local.
+                </li>
+                <li>
+                    <h4>Date.getHours()</h4>
+                    Devuelve el valor de horas usando la hora local.
+                </li>
+            </ul>
+        </p>
+        <h3>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</h3>
+        <ul>
+            <ul>
+                <li>
+                    <h4>Array.toString()</h4>
+                    Converts an array to a string of comma separated array values.
+                </li>
+                <li>
+                    <h4>Array.join()</h4>
+                    Joins all array elements into a string.
+                </li>
+                <li>
+                    <h4>Array.pop()</h4>
+                    Removes the last element from an array.
+                </li>
+                <li>
+                    <h4>Array.push()</h4>
+                    Adds a new element to an array (at the end).
+                </li>
+                <li>
+                    <h4>Array.shift()</h4>
+                    Removes the first array elements and shifts all the other elements to a lower index.
+                </li>
+            </ul>
+        </ul>
+        <h3>¿Cómo se declara una variable con alcance local dentro de una función? </h3>
+        <p>
+            Se declara una variable como normalmente se hace dentro de la funcion y esta variable no saldrá de la función
+            <br/>
+            var prueba = "hola";
+            <br/>
+            function prueba(){
+                <br/>
+                var prueba = "Me llamo Jorge";
+                <br/>
+            }
+            <br/>
+            prueba();
+            <br/>
+            prueba += "me llamo Alberto";
+            <br/>
+            document.write(prueba);
+            <br/>
+            //Salida: "hola me llamo Alberto"
+        </p>
+        <h3>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</h3>
+        <p>
+            Es una mala practica ya que la variable global cambiará dentro de la funcion y se guardará afuera de la función lo que puede confundir.
+            Si no está la variable declarada localmente dentro de la función, buscará la variable global.
+        </p>
+        <h3>¿Qué método de String se puede utilizar para buscar patrones con expresiones regulares?¿Para qué podrías utilizar esto en una aplicación web?</h3>
+        <p>
+            String.search().
+            Para revisar quien envió un correo electronico, buscar datos de una persona o de alguna cosa que se desee lo que es muy útil para analizar datos.
+        </p>
+        <h2>Referencias.</h2>
+        <ul>
+            <li>
+                Rodríguez, J., & Rodríguez, J. (2018). Diferencias entre Java y JavaScript. GestioPolis - Conocimiento en Negocios. Retrieved 23 January 2018, from https://www.gestiopolis.com/diferencias-java-javascript/
+            </li>
+            <li>
+                Date (Objeto de JavaScript). (2018). Msdn.microsoft.com. Retrieved 23 January 2018, from https://msdn.microsoft.com/es-es/library/cd9w2te4(v=vs.94).aspx
+            </li>
+            <li>
+                JavaScript Array Methods. (2018). W3schools.com. Retrieved 23 January 2018, from https://www.w3schools.com/js/js_array_methods.asp
+            </li>
+            <li>
+                Ámbito de la variable (JavaScript). (2018). Msdn.microsoft.com. Retrieved 23 January 2018, from https://msdn.microsoft.com/es-es/library/bzt2dkta(v=vs.94).aspx
+            </li>
+            <li>
+                    JavaScript String search() Method. (2018). W3schools.com. Retrieved 23 January 2018, from https://www.w3schools.com/jsref/jsref_search.asp
+            </li>
+        </ul>
+    </body>
+    <script type="text/javascript" src="script.js"></script>
+</html>
