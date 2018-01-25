@@ -35,3 +35,39 @@ function validarContrasena(){
     alert("Error")
     return 0;
 }
+function revisionProductos(){
+    var platanos = document.forms["numproductos"]["platanos"].value;
+    var peras = document.forms["numproductos"]["peras"].value;
+    var manzanas = document.forms["numproductos"]["manzanas"].value;
+    if(manzanas === "" && platanos == "" && peras == ""){
+        alert("No compraste nada.");
+        return 0;
+    }
+    if(manzanas < 0 || peras < 0 || platanos < 0){
+        alert("No puedes ingresar numeros menores a 0.");
+        return;
+    }
+    if(manzanas.match(/^[0-9]+$/) == null|| peras.match(/^[0-9]+$/) == null || platanos.match(/^[0-9]+$/) == null){
+        alert("Favor de solo insertar numeros.");
+        return;
+    }
+    manzanas = parseInt(manzanas);
+    peras = parseInt(peras);
+    platanos = parseInt(platanos)
+    if(manzanas > 20){
+        alert("No hay suficientes manzanas en el almacen.");
+        return;
+    }else if(platanos > 30){
+        alert("No hay suficientes platanos en el almacen.");
+        return;
+    }else if(peras > 40){
+        alert("No hay suficientes peras en el almacen");
+        return;
+    }
+    sum1 = (manzanas*10) + (peras*30) + (platanos*20);
+    sum2 = sum1 + (sum1*.15);
+    alert("Tú total es de: \n" + sum1 + " más el 15% de IVA: " + sum2);
+
+
+
+}
