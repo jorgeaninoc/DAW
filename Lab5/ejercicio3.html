@@ -34,12 +34,14 @@
 								La contraseña debe tener 6 o más caracteres, al menos 1 mayúscula y al menos 1 número.
 							</p>
 						</header>
-						<form name="clave" onsubmit="validarContrasena()">
+						<form name="clave">
 							Contraseña:<br/>
 							<input name="clave1" type="password"/><br/>
-							Contraseña encriptada:<br/>
+							Repetir contraseña:<br/>
 							<input name="clave2" type="password"/><br/>
-							<input type="submit">
+							Contraseña encriptada:<br/>
+							<input name="clave3" type="text" disabled/><br/>
+							<input type="button" value="Submit" onclick="validarContrasenaYEncriptar()">
 						</form>
 					</div>
 				</div>
