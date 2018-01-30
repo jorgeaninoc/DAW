@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Lab 6: Documentos dinámicos con JavaScript</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<h1 align="center">Laboratorio 6: Documentos dinámicos con JavaScript</h1>
+			<h2 align="center"><a  href="../../index.html">Regresar al menu de laboratorios</a></h2>
+		</header>
+		<h3 class="marcadeagua" id="marcadeagua">Jorge Niño</h3>
+		<br/>
+		<br/>
+		<hr/>
+		<h2>Ejercicio 1:</h2>
+		<div id="mouse" class="mouse">
+			Si pasas el mouse encima de mi, cambiaré de color y tamaño.
+		</div>
+		<br/><br/><br/><br/>
+		<hr/>
+		<h2>Ejercicio 2:</h2>
+		<br/>
+		Haz click en el cuadro de clave.
+		<br/>
+		<form id="clave">
+			Contraseña:<br/>
+			<input required name="clave1" type="password"/><br/>
+			<div id="reqs">
+				<ul>
+					<li>Al menos 6 caractéres</li>
+					<li>Al menos 1 número</li>
+					<li>Al menos 1 mayúscula</li>
+				</ul>
+			</div>
+		</form>
+		<br/><br/><br/><br/>
+		<hr/>
+		<h2>Ejercicio 3:</h2>
+		<br/>
+		Haz click para cambiar el color del fondo
+		<br/>
+		<button type="button" class="color" id="color">Cambiar color</button>
+		<br/><br/><br/><br/>
+		<hr/>
+		<h2>Ejercicio 4:</h2><br/>
+		Arrastra la imagen de las manzanas al otro cuadro y viceversa.
+		<br/>
+		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<img src="../images/manzana.jpg" draggable="true" ondragstart="drag(event)" id="drag1">
+		</div>
+		<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<br/><br/><br/><br/><br/><br/><br/><br/>
+		<hr/>
+		<h2>Preguntas a responder</h2>
+		<h4>¿Cuáles son las diferencias entre los posibles valores de la propiedad position?</h4>
+			<ul>
+				<li>
+					Static: Es el valor por default, los elementos hacen render en orden en el que aparecen en el documento<br>
+				</li>
+				<li>
+					Absolute: El elemento esta posicionado relativo al su ancestro<br>	
+				</li>
+				<li>
+					Fixed: El elemento esta posicionado relativamente en la ventana.
+				</li>
+				<li>
+					Relative: El elemento esta posicionado relativamente a su posición normal.
+				</li>
+				<li>
+					Sticky: El elemento esta posicionado basandose en el scroll del usuario.
+				</li>
+				<li>
+					Initial: Pone esta propiedad en su valor por default.
+				</li>
+				<li>
+					Inherit: Hereda esta propiedad de un elemento padre.
+				</li>
+			</ul>	
+			<h4>¿Cuáles son los valores estándar para la propiedad visibility?</h4>
+			<ul>
+				<li>
+					Visible: Valor por default, el elemento es visible.
+				</li>
+				<li>
+					Hidden: El elemento es invisible, pero ocupa espacio.
+				</li>
+				<li>
+					Collapse: Solo para elementos de tabla. Remueve filas o columnas pero no afecta la tabla.
+				</li>
+				<li>
+					Initial: Pone esta propiedad en su valor default.
+				</li>
+				<li>
+					Inherit: Hereda esta propiedad de un elemento padre.
+				</li>
+			</ul>
+			
+			<h4>¿Qué es el zIndex y para qué sirve?</h4>
+			El zIndex es una propiedad que define el orden en el que se ven los elementos, un elemento con un numero mayor, siempre ira  por encima de los de orden menor.
+			<hr/>
+			<h2>Referencias</h2>
+			<ul>
+				<li>
+					https://www.w3schools.com/cssref/pr_class_visibility.asp
+				</li>
+				<li>
+					https://www.w3schools.com/cssref/pr_class_position.asp
+				</li>
+				<li>
+					https://stackoverflow.com/questions/21458162/creating-watermark-using-html-and-css
+				</li>
+				<li>
+					http://www.w3schools.com/html/html5_draganddrop.asp
+				</li>
+			</ul>
+		<footer>
+		</footer>
+	</body>
+	<script src="script.js"></script>
+</html>
