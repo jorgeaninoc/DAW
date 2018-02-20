@@ -1,0 +1,20 @@
+sp_help materiales ¿Que muestra la instrucción?
+
+Una tabla con las columnas de la tabla creada con sus respectivos tipos de datos, longitud, si pueden ser valores nulos, entre otras cosas.
+También muestra el Owner de la tabla, el tipo de tabla, fecha de creación y el nombre de la tabla creada.
+
+¿Qué efecto tuvo esta acción?
+
+Ejecutar todos los create table juntos crea todas las tablas como es esperado.
+
+¿Qué utilidad tiene esta manera de ejecutar los comandos de SQL?
+
+Nos ejecuta un conjunto de operaciones dentro de un archivo, por lo que no tenemos que ejecutar bloque por bloque.
+
+¿Qué relación tiene el contenido de este archivo (materiales.sql) con el formato en que se encuentran los datos en el archivo materiales.csv?
+
+Que lo mismo que esta en el .csv es lo mismo que se pasó al .sql.
+
+SELECT * FROM Materiales ¿Qué sucedió?
+
+Se imprimen todos los datos de la tabla.

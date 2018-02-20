@@ -1,0 +1,10 @@
+SET DATEFORMAT dmy
+
+BULK INSERT a1172309.a1172309.[Entregan]
+	FROM 'e:\wwwroot\a1172309\entregan.csv'
+	WITH
+		(
+			CODEPAGE='ACP',
+			FIELDTERMINATOR=',',
+			ROWTERMINATOR='\n'
+		)
