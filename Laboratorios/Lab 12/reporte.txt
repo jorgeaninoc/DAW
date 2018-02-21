@@ -1,0 +1,77 @@
+-- Ejercicio 2 Preguntas
+
+Revisa el contenido de la tabla materiales y determina si existe alguna inconsistencia en el contenido de la tabla. ¿Cuál es? ¿A qué se debe?
+
+La fila que agregamos "1000, xxx, 1000" tiene la misma clave que una fila que ya está en la tabla "1000, Varilla 3/16, 100.00" y esto le quita unicidad a una fila lo que causa la inconsistencia.
+
+ALTER TABLE Materiales add constraint llaveMateriales PRIMARY KEY (Clave) 
+INSERT INTO Materiales values(1000, 'xxx', 1000)
+
+¿Que ocurrió?
+
+Surge un error de violación de la PRIMARY KEY que indica que no se puede insertar objetos con llaves duplicadas.
+
+sp_helpconstraint materiales  ¿Qué información muestra esta consulta?
+
+Las constraints que se han creado, su nombre, su estatus, y en que tabla se creó.
+
+¿Qué sentencias utilizaste para definir las llaves primarias?
+
+ALTER TABLE Materiales add constraint llaveMateriales PRIMARY KEY (Clave)
+ALTER TABLE Provedoores add constraint llaveProveedores PRIMARY KEY (RFC) 
+ALTER TABLE Proyectos add constraint llaveProyectos PRIMARY KEY (Numero) 
+
+¿Qué sentencias utilizaste para definir este constrait?
+
+ALTER TABLE Entregan add constraint llaveEntregan PRIMARY KEY (Clave, RFC, Numero, Fecha) 
+
+
+-- Ejercicio 3 Preguntas
+
+¿Qué particularidad observas en los valores para clave, rfc y numero?
+
+Que los datos que insertamos son irrelevantes ya que la clave es 0, el numero es 0 entre otras cosas.
+
+¿Cómo responde el sistema a la inserción de este registro?
+
+Sí nos permitió insertarlo ya que no hay ninguna fila con los mismos datos de clave, rfc y número en la tabla.
+
+¿Qué significa el mensaje que emite el sistema?
+
+Que no se puede insertar debido a que la clave insertada no existe en la tabla materiales.
+
+
+ALTER TABLE entregan add constraint cfentreganclave foreign key (clave) references materiales(clave);
+¿Qué significado tiene la sentencia anterior? 
+
+Que se agrega un constraint a la tabla entregan con una llave foranea que es la columna clave en materiales por lo que
+no se puede insertar un dato que la clave insertada no exista también en la tabla materiales.
+
+¿Qué significan las columnas de esas consultas? 
+
+Aparecen las llaves primarias de la tabla que consultamos y las llaves foraneas que se estan utilizando desde otras tablas.
+
+
+-- Ejercicio 4 Preguntas
+
+¿Qué uso se le está dando a GETDATE()?
+
+Obtiene la fecha y hora del día de hoy y la fila se inserta con estos datos.
+
+¿Tiene sentido el valor del campo de cantidad?
+
+No, en la entidad entregan no puedes tener un producto en cantidad 0 ya que no se pueden entregar 0 productos, no tendría sentido.
+
+¿Cómo responde el sistema?
+
+No te permite insertarlo a la tabla y enseña un mensaje de error.
+
+¿Qué significa el mensaje? 
+
+Que no se puede insertar debido a que existe un constraint que indica que la cantidad debe ser mayor que 0.
+
+Integridad Referencial: La integridad referencial es una propiedad de la base de datos. La misma significa que la clave externa de una tabla de referencia siempre debe aludir a una fila válida de la tabla a la que se haga referencia.
+
+
+
+
