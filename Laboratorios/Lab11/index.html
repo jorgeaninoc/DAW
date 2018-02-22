@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Lab 11: Manejo de formas con php y modelo de capas</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+			<header id="header">
+				<a class="logo" href="../../index.html">Jorge Alberto Niño Cabal A01172309</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="../../index.html">Home</a></li>
+				</ul>
+			</nav>
+			<section id="banner">
+				<div class="inner">
+					<h1>Lab 11: Manejo de formas con php y modelo de capas</h1>
+					<br/>
+				</div>
+			</section>
+			<section class="wrapper">
+				<div class="inner">
+					<div class="highlights">
+						<section>
+							<div class="content">
+								<header>
+									<h2><a href="entry.php">Pagina: CLICK AQUI</a></h2>
+								</header>
+								<p>Pagina realizada en PHP con validación de entradas.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<h3>¿Por qué es una buena práctica separar el controlador de la vista?</h3>
+								</header>
+								<p>Separar la lógica de la interfaz de usuario facilita la funcionalidad, mantenibilidad y escalabilidad del sistema, de forma 
+									comoda y sencilla, a la vez que podemos mezclar lenguajes de programación en el mismo código.
+								</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<h3>Aparte de los arreglos $_POST y $_GET, ¿qué otros arreglos están predefinidos en php y cuál es su función?</h3>
+								</header>
+								<p>
+									<ol>
+										<li>
+											$GLOBALS: Contiene todas las variables globales
+										</li>
+										<li>
+											$_SERVER: Contiene información como cabeceras, rutas y ubicaciones de script.
+										</li>
+										<li>
+											$_FILES: Elementos subidos al script a través del metodo POST.
+										</li>
+										<li>
+											$_COOKIE: Contiene variables pasadas al script actual a través de cookies.
+										</li>
+										<li>
+											$_SESSION: Contiene variables de sesión disponibles.
+										</li>
+										<li>
+											$_REQUEST: Contiene el contenido de $_GET, $_POST y $_COOKIE.
+										</li>
+										<li>
+											$_ENV: Variables de entorno pasadas al script actual.
+										</li>
+									</ol>
+								</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<h3>Explora las funciones de php, y describe 2 que no hayas visto en otro lenguaje y que llamen tu atención.</h3>
+								</header>
+								<p>
+									<ul>
+										<li>
+											crypt(string $a): Hashing de una sola vía de un string.
+										</li>
+										<li>
+											md5(string $a): Calcula el hash md5 de un string.
+										</li>
+									</ul>
+								</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<h3>¿Qué es XSS y cómo se puede prevenir?</h3>
+								</header>
+								<p>
+									<ul>
+										<li>
+											Es un tipo de ataque en donde el hacker inyecta codigo malicioso en el cliente para que afecte el output de tu página web.
+											Las aplicaciones que no tienen la manera de escapar del output al ataque son vulnerables.
+										</li>
+										<li>
+											Se previene utilizando funciones como htmlspecialchars() o htmlentities() que previenen el output de la pagina.
+											Ambas funciones de php convierten chars problematicos en entidades de HTML haciendo que el codigo inyectado sea inofensivo.
+										</li>
+									</ul>
+								</p>
+							</div>
+						</section>
+						
+					</div>
+				</div>
+			</section>
+			<footer id="footer">
+					<div class="inner">
+						<div class="content">
+							<section>
+								<h3>Referencias</h3>
+								<p>[1] https://victorroblesweb.es/2013/11/18/tutorial-mvc-en-php-nativo/<br/>
+								[2] http://php.net/manual/es/language.variables.superglobals.php<br/>
+								[3] http://desarrollophpmysql.blogspot.mx/2012/05/funciones-predefinidas-en-php.html<br/>
+								[4] https://medium.com/@jpmorris/how-to-prevent-xss-attacks-by-escaping-output-in-php-942204bf184<br/>
+								</p>
+							</section>
+						</div>
+					</div>
+			</footer>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+	</body>
+</html>
