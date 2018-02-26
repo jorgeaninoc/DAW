@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Lab 13: Manejo de sesiones con php</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+			<header id="header">
+				<a class="logo" href="../../index.html">Jorge Alberto Niño Cabal A01172309</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="../../index.html">Home</a></li>
+				</ul>
+			</nav>
+			<section id="banner">
+				<div class="inner">
+					<h1>Lab 13: Manejo de sesiones con php</h1>
+					<br/>
+				</div>
+			</section>
+			<section class="wrapper">
+				<div class="inner">
+					<div class="highlights">
+						<section>
+							<div class="content">
+								<header>
+									<h2><a href="entry.php">Pagina: CLICK AQUI</a></h2>
+								</header>
+								<p>Manejo de sesiones con php</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<h3>¿Por qué es importante hacer un session_unset() y luego un session_destroy()?</h3>
+								</header>
+								<p>
+									Como buena práctica, para primero eliminar eficazmente y correctamente las variables globales y una vez hecho esto, destruir la sesión del usuario.
+								</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<h3>¿Cuál es la diferencia entre una variable de sesión y una cookie?</h3>
+								</header>
+								<p>
+									Una variable de sesión es una variable global que se mantiene durante la sesión de un usuario, la variable solo puede ser utilizada dentro de la sesión iniciada por cierto usuario.
+									Una cookie es una variable que perdura y es almacenada en el disco duro del usuario, puede permanecer más tiempo que el de la variable de sesión.
+								</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<h3>¿Qué técnicas se utilizan en sitios como facebook para que el usuario no sobreescriba sus fotos en el sistema de archivos cuando sube una foto con el mismo nombre?</h3>
+								</header>
+								<p>
+									Se revisan las variables de sesión para ver si un archivo con el mismo nombre ya existe.
+								</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<h3>¿Qué es CSRF y cómo puede prevenirse?</h3>
+								</header>
+								<p>
+									<ul>
+										<li>
+											Es un ataque que forza al usuario a ejecutar acciones no deseadas en una aplicación web en donde ellos ya están autenticados (dentro de una sesión personal).
+										</li>
+										<li>
+											Se previene utilizando frameworks que ya tengan soporte instalado como Joomla, Spring, etc. También utilizando programas de terceros para proteger aplicaciones web. Existen también otras maneras como sincronizar tokens de sesión.  
+										</li>
+									</ul>
+								</p>
+							</div>
+						</section>
+						
+					</div>
+				</div>
+			</section>
+			<footer id="footer">
+					<div class="inner">
+						<div class="content">
+							<section>
+								<h3>Referencias</h3>
+								<p>[1] http://idesweb.es/proyecto/proyecto-prac09-php-cookies-sesiones<br/>
+								[2] https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)<br/>
+								[3] https://www.w3schools.com/php/php_sessions.asp<br/>
+								[4] https://www.w3schools.com/php/php_file_upload.asp<br/>
+								</p>
+							</section>
+						</div>
+					</div>
+			</footer>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+	</body>
+</html>
