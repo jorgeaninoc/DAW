@@ -23,6 +23,14 @@ require_once('utils.php');
         <div class="col-sm-2"></div>
         <br>
         <br>
+        <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="col-md-12">
+                    <a class="btn btn-secondary py-0" href="index.html"><i class="material-icons align-middle">arrow_back</i></a>
+    <!--                    <button type="submit" class="btn btn-outline-secondary mx-auto">Iniciar Sesión</button>-->
+                    </div>
+                </div>
+            </div>
     </div>
 </div>
 <?php include("partials/_footer.html"); ?>
