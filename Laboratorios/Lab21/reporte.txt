@@ -1,0 +1,92 @@
+ IF EXISTS (SELECT name FROM sysobjects 
+                       WHERE name = 'creaMaterial' AND type = 'P')
+                DROP PROCEDURE creaMaterial
+            GO
+            
+            CREATE PROCEDURE creaMaterial
+                @uclave NUMERIC(5,0),
+                @udescripcion VARCHAR(50),
+                @ucosto NUMERIC(8,2),
+                @uimpuesto NUMERIC(6,2)
+            AS
+                INSERT INTO Materiales VALUES(@uclave, @udescripcion, @ucosto, @uimpuesto)
+            GO
+
+¿Qué hace el primer bloque del código (bloque del IF)?
+	Deshace el procedimiento creado con nombre "creaMaterial".
+
+¿Para qué sirve la instrucción GO?
+	Quiere decir que empieze a correr el codigo declarado anteriormente.
+
+¿Explica que recibe como parámetro este Procedimiento y qué tabla modifica?
+	Modifica la tabla Materiales y recibe como parametro una clave, descripción, costo e impuesto del material.
+
+
+EXECUTE creaMaterial 5000,'Martillos Acme',250,15
+SELECT * FROM Materiales
+
+
+
+ IF EXISTS (SELECT name FROM sysobjects 
+                       WHERE name = 'modificaMaterial' AND type = 'P')
+                DROP PROCEDURE modificaMaterial
+            GO
+
+            CREATE PROCEDURE modificaMaterial
+                @uclave NUMERIC(5,0),
+                @udescripcion VARCHAR(50),
+                @ucosto NUMERIC(8,2),
+                @uimpuesto NUMERIC(6,2)
+            AS		
+		UPDATE Material
+		SET clave = @uclave, descripcion = @udescripcion, costo = @ucosto, impuesto = @uimpuesto
+		WHERE clave = @uclave; 
+
+            GO
+
+
+IF EXISTS (SELECT name FROM sysobjects 
+                       WHERE name = 'eliminaMaterial' AND type = 'P')
+                DROP PROCEDURE eliminaMaterial
+            GO
+
+            CREATE PROCEDURE eliminaMaterial
+                @uclave NUMERIC(5,0)
+            AS		
+		DELETE FROM Material
+		WHERE clave = @uclave; 
+
+            GO
+
+
+
+
+IF EXISTS (SELECT name FROM sysobjects 
+                                       WHERE name = 'queryMaterial' AND type = 'P')
+                                DROP PROCEDURE queryMaterial
+                            GO
+                            
+                            CREATE PROCEDURE queryMaterial
+                                @udescripcion VARCHAR(50),
+                                @ucosto NUMERIC(8,2)
+                            
+                            AS
+                                SELECT * FROM Materiales WHERE descripcion 
+                                LIKE '%'+@udescripcion+'%' AND costo > @ucosto 
+                            GO
+
+EXECUTE queryMaterial 'Lad',20
+
+Explica en tu reporte quérecibe como parámetro este Procedimiento y qué hace 
+	Recibe como parametro la descripción y el costo de un material e imprime los materiales que tengan una descripción parecida a lo insertado y un costo mayor que lo insertado.
+
+
+¿Qué ventajas tienen el utilizar Store Procedures en una aplicación cliente-servidor y en un proyecto?
+	Que aumenta la modulación del programa, reutilizas codigo y es mas limpio tú codigo. También si quieres cambiar tú codigo en varias partes solo cambias el procedimiento.
+
+
+
+
+
+
+                
