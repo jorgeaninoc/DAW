@@ -21,7 +21,7 @@ function insertEntrada($number){
         $str_time = time();
         $_SESSION['start_time'] = $str_time;
     }
-    if($number != "4 8 15 16 23 42" || (date("i",$_SESSION["start_time"]) - date("i",time())) > 100){
+    if($number != "4 8 15 16 23 42" || (date("i",time()) - date("i",$_SESSION["start_time"])) > 100){
         $statement = mysqli_prepare($connection,"
         insert into entrada (number,status,date)
         values (?, 'SYSTEM FAILURE', ?);
