@@ -1,0 +1,79 @@
+<br /><br />
+<div class="container shadow">
+    <div class="row">
+        <div class="col-sm-12">
+                <div class="text-center">
+                    <div class="display-4">Entrada</div>
+                    <br>
+                    <span class="warning cnullalert">Debes llenar todos los campos</span>
+                </div>
+        </div>
+    </div>
+    <form method="post" id="entrada_form" action="controller/entradaInsert_controller.php"><!-- action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">-->
+
+        <div class="row">
+
+                <div class="col-sm-12 col-md-12">
+                    <div class='form-group'>
+                        <label for="entrada_number">Número de entrada:</label>
+                        <div class="col-md-12">
+                            <input  class="form-control" id="entrada_number" name="entrada[number]" size="30" type="text" placeholder=""/>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="row">
+
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                        <a class="btn btn-secondary py-0" href="index.php"><i class="material-icons align-middle">arrow_back</i></a>
+        <!--                    <button type="submit" class="btn btn-outline-secondary mx-auto">Iniciar Sesión</button>-->
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <button id="registrarEntrada" type="submit" class="btn btn-secondary mx-auto chinsert" value="Registrar Entrada">Registrar Entrada</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </form>
+    <br><br><br>
+    <div class='row'>
+        <div class="col-sm-12">
+            <div class="text-center">
+            <div class="display-4">Reporte 1: Todos los registros</div>
+            <br><br>
+            <div id="entrada_table" class='col-12'>
+                <!--Aqui habrá una tabla con todos los entradas-->
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        <div class="col-sm-12">
+            <div class="text-center">
+            <div class="display-4">Reporte 2: SYSTEM FAILURE</div>
+            <br><br>
+            <div id="reporte2" class="col-12"></div>
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        <div class="col-sm-12">
+            <div class="text-center">
+            <div class="display-4">Reporte 3: SYSTEM FAILURE AND SUCCESS</div>
+            <br><br>
+            <div id="reporte3" class="col-12"></div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+
+<script src="js/dynamicqueries_viewInfo.js"></script>
+<script src="js/dynamicqueries_reporte2.js"></script>
+<script src="js/dynamicqueries_reporte3.js"></script>
