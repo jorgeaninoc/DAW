@@ -13,7 +13,6 @@ function connect() {
 function disconnect($mysql) {
     mysqli_close($mysql);
 }
-
 function insertEntrada($number){
     $connection = connect();
     if (!isset($_SESSION['start_time']))
@@ -21,7 +20,18 @@ function insertEntrada($number){
         $str_time = time();
         $_SESSION['start_time'] = $str_time;
     }
-    if($number != "4 8 15 16 23 42" || (date("i",time()) - date("i",$_SESSION["start_time"])) > 100){
+    if((date("i",time()) - date("i",$_SESSION["start_time"])) > 100){
+        $statement = mysqli_prepare($connection,"
+        insert into entrada (number,status,date)
+        values (?, 'SYSTEM FAILURE', ?);
+        ");
+        $statement->bind_param("ss","",date("Y-m-d h:i:sa"));
+        $statement->execute();
+        disconnect($connection);
+        $str_time = time();
+        $_SESSION['start_time'] = $str_time;
+    }
+    else if($number != "4 8 15 16 23 42"){
         $statement = mysqli_prepare($connection,"
         insert into entrada (number,status,date)
         values (?, 'SYSTEM FAILURE', ?);
@@ -42,7 +52,6 @@ function insertEntrada($number){
         disconnect($connection);
     }
 }
-
 
 function queryAllEntradas(){
     $connection = connect();
