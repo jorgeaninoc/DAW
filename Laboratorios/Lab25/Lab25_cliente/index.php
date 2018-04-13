@@ -3,7 +3,7 @@ include("idx.html");
 //GET
 
 $h = curl_init();
-curl_setopt($h, CURLOPT_URL, "http://localhost:8012/Labs/Lab24_servicio/public/words");
+curl_setopt($h, CURLOPT_URL, "http://localhost/DAW_A01172309/Laboratorios/Lab25/Lab25_servicio/public/words");
 curl_setopt($h, CURLOPT_RETURNTRANSFER, true);
 $r = json_decode(curl_exec($h));
 curl_close($h);
